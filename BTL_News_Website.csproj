@@ -67,9 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MainPage\index.html" />
-    <Content Include="MainPage\index_script.js" />
-    <Content Include="MainPage\index_style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
