@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderNavFooter.master.cs" Inherits="BTL_News_Website.HeaderNavFooter" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+<%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+    <link rel="stylesheet" href="assets/css/header_nav_footer_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f9729c3be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header id="header">
+                <nav>
+                <ul>
+                    <li class="text_logo">
+                        <h1>CQT News</h1>
+                    </li>
+                    <li>
+                        <a class="link home" href="trangchu.aspx" title="Trang chủ">
+                            <p>Trang chủ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link 1" href="#" title="Khoa học & Công nghệ">
+                            <p>Khoa học & Công nghệ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link 2" href="#" title="Giáo dục">
+                            <p>Giáo dục</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link 3" href="#" title="Thể thao">
+                            <p>Thể thao</p>
+                        </a>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Tìm kiếm" />
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="link personal" href="#">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
+            <section class="main_content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </section>
+            <footer>
+                <ul class="child_footer1">
+                    <li>
+                        <h1 class="text_logo">CQT News</h1>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.facebook.com/fithou.edu.vn">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://hou.edu.vn/">
+                            <i class="fa-solid fa-earth-asia"></i>
+                        </a>
+                    </li>
+                </ul>
+                <hr />
+                <ul class="child_footer2">
+                    <li>
+                        <p>Bản quyền ©2002-2022 CQT News bảo lưu mọi quyền</p>
+                    </li>
+                    <li>
+                        <a href="#header" title="Quay về đầu trang">Quay về đầu trang</a>
+                    </li>
+                </ul>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>
