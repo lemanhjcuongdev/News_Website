@@ -16,14 +16,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
             <header id="header">
                 <nav>
                 <ul>
                     <li class="text_logo">
                         <h1>CQT News</h1>
                     </li>
-                    <li>
+                    <li class="active">
                         <a class="link home" href="trangchu.aspx" title="Trang chủ">
                             <p>Trang chủ</p>
                         </a>
@@ -45,7 +44,7 @@
                     </li>
                     <li>
                         <input type="text" placeholder="Tìm kiếm" />
-                        <button type="submit">
+                        <button type="submit" title="">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </li>
@@ -58,7 +57,9 @@
             </nav>
             </header>
             <section class="main_content">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                <section class="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </section>
             </section>
             <footer>
                 <ul class="child_footer1">
@@ -84,8 +85,9 @@
                     </li>
                 </ul>
             </footer>
-
-        </div>
     </form>
-</body>
+    </body>
+<%--    <script>
+        alert("Alo123")
+    </script>--%>
 </html>

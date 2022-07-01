@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     width: 100vw;
@@ -21,11 +22,12 @@ header nav ul li.text_logo{
 }
 header nav ul li.text_logo h1, footer ul li h1{
     font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
 }
 header nav ul li.text_logo h1:hover{
-    text-shadow: 0px 0px 18px #808080;
+    text-shadow: 0px 0px 18px #c4c4c4;
 }
-header nav ul, footer ul {
+header nav ul, footer ul{
     width: 1366px;
     height: 60px;
     display: flex;
@@ -39,6 +41,11 @@ header nav ul, footer ul {
 header nav ul li a{
     text-decoration: none;
     color: #333333;
+    transition: all 0.2s;
+}
+header nav ul li.active{
+    border-bottom: 4px solid #cccccc;
+
 }
 header nav ul li a.link.personal{
     font-size: 22px;
@@ -52,6 +59,7 @@ header nav ul li input[type="text"]{
     border: 2px solid #cccccc;
     border-radius: 4px;
     margin-right: 4px;
+    transition: all 0.3s;
 }
 header nav ul li input[type="text"]:focus{
     outline: none;
@@ -63,11 +71,11 @@ header nav ul li button[type="submit"]{
     font-size: 18px;
     background-color: white;
 }
-section.main_content {
+section.main_content section.container{
     width: 1366px;
-/*    display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;*/
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
