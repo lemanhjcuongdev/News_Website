@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asset\css\dangbai_style.css" />
     <Content Include="asset\css\header_nav_footer_style.css" />
     <Content Include="asset\css\trangchu_style.css" />
     <Content Include="asset\images\xang.jpg" />

@@ -42,7 +42,7 @@ namespace BTL_News_Website
                     Response.Write("<script>alert('Không tìm thấy bài báo nào với từ khóa: " + inputSearch + "')</script>");
                 } else
                 {
-                    Response.Write("<script>alert('Có tổng cộng " + count + " bài báo')</script>");
+                    //Response.Write("<script>alert('Có tổng cộng " + count + " bài báo')</script>");
                 }
                 Session["renderNewsList"] = sHTML;
             }

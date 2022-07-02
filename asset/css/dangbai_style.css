@@ -1,0 +1,19 @@
+﻿form.dangbai *{
+    margin: 10px;
+}
+label{
+    font-size: 18px;
+    font-weight: 500;
+}
+textarea {
+    padding: 10px;
+    border-radius: 11px;
+}
+select option p{
+    font-size: 20px;
+}
+input[type="submit"] {
+    padding: 18px 44px;
+    font-size: 18px;
+    font-weight: 500;
+}
