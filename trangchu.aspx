@@ -12,6 +12,7 @@
     <body>
         <%-- một hai ba te --%>
         <%-- 123123123123123 --%>
+        <%--Cường đã ở đây--%>
         <section class="content">
 
         </section>
