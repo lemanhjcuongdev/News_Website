@@ -12,7 +12,7 @@
             <tr>
                 <td>
                     <h1>Đăng nhập</h1>
-                    <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để sử dụng những đặc quyền của thành viên!</p>
+                    <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>
                     <label>Tài khoản: </label> 
                     <input type ="text" class ="taikhoan" name="inputTK" /><br />
                     <label>Mật khẩu: </label> 
@@ -21,7 +21,7 @@
                 </td>
                 <td>
                     <h1>Đăng ký</h1>
-                    <p>Nếu chưa có tài khoản, còn chờ đợi gì nữa mà không đăng ký ngay bây giờ!</p>
+                    <p>Nếu chưa có tài khoản, đăng ký ngay!</p>
                     <label>Tài khoản: </label> 
                     <input type ="text" class ="taikhoan1" name="inputTK1" /><br />
                     <label>Mật khẩu: </label> 
