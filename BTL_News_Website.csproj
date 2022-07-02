@@ -70,6 +70,7 @@
     <Content Include="asset\images\xang.jpg" />
     <Content Include="asset\images\Zalo1.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="login_register.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="HeaderNavFooter.Master.designer.cs">
       <DependentUpon>HeaderNavFooter.Master</DependentUpon>
+    </Compile>
+    <Compile Include="login_register.aspx.cs">
+      <DependentUpon>login_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_register.aspx.designer.cs">
+      <DependentUpon>login_register.aspx</DependentUpon>
     </Compile>
     <Compile Include="News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
