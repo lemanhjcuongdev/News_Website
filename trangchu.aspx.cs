@@ -11,7 +11,27 @@ namespace BTL_News_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["renderNewsList"] = renderNewsList();
+        }
+        private string renderNewsList()
+        {
+            string sHTML = "";
+            List<News> dsBao = Application["newslist"] as List<News>;
+            for(int i = 0; i < dsBao.Count; i++)
+            {
+                sHTML += "<section class='item'>" +
+                    "<a href='#'>" +
+                    "<img src='"+dsBao[i].Image+"' />" +
+                    "<p class='title'>"+dsBao[i].Title+"</p>" +
+                    "<section class='description'>" +
+                    "<p class='time'>"+dsBao[i].Time+ " ngày trước • </p>" +
+                    "<p class='category'>"+dsBao[i].Category+"</p>" +
+                    "</section>" +
+                    "</a>" +
+                    "</section>";
+            }
 
+            return sHTML;
         }
     }
 }

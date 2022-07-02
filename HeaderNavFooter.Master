@@ -7,7 +7,7 @@
     <title></title>
 <%--    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>--%>
-    <link rel="stylesheet" href="assets/css/header_nav_footer_style.css" />
+    <link rel="stylesheet" href="asset/css/header_nav_footer_style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -15,7 +15,8 @@
     <script src="https://kit.fontawesome.com/5f9729c3be.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form action="trangchu.aspx" method="post" id="form1" runat="server">
+            
             <header id="header">
                 <nav>
                 <ul>
@@ -34,7 +35,7 @@
                     </li>
                     <li>
                         <a class="link 2" href="#" title="Giáo dục">
-                            <p>Giáo dục</p>
+                            <p>Xã hội</p>
                         </a>
                     </li>
                     <li>
@@ -43,7 +44,7 @@
                         </a>
                     </li>
                     <li>
-                        <input type="text" placeholder="Tìm kiếm" />
+                        <input name="inputSearch" type="text" placeholder="Tìm kiếm" />
                         <button type="submit" title="">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -87,7 +88,4 @@
             </footer>
     </form>
     </body>
-<%--    <script>
-        alert("Alo123")
-    </script>--%>
 </html>

@@ -38,6 +38,9 @@
   grid-row: 1/2;
   grid-column: 4/7;
 }
+.item:first-child img, .item:nth-child(2) img {
+    height: 377px;
+}
 
 .item:nth-child(3) {
   grid-row: 2/3;
@@ -52,6 +55,10 @@
 .item:nth-child(5) {
   grid-row: 2/3;
   grid-column: 5/7;
+}
+
+.item:nth-child(3) img, .item:nth-child(4) img, .item:nth-child(5) img, {
+    height: 274px;
 }
 
 .item:nth-child(n+6) {
@@ -69,7 +76,6 @@
 }
 
 .item:nth-child(n+6) p {
-
   margin-left: 50px;
 }
 

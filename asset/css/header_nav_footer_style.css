@@ -43,10 +43,10 @@ header nav ul li a{
     color: #333333;
     transition: all 0.2s;
 }
-header nav ul li.active{
+/*header nav ul li.active{
     border-bottom: 4px solid #cccccc;
 
-}
+}*/
 header nav ul li a.link.personal{
     font-size: 22px;
 }
