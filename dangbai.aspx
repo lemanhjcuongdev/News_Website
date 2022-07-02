@@ -23,7 +23,7 @@
         <input type="file" name="inputImage" id="inputImage" accept="image/*"/>
           <br />
           <label>Chọn thể loại: </label>
-          <select class="category">
+          <select name="inputCategory" class="category">
               <option value="Khoa học & Công nghệ">Khoa học & Công nghệ</option>
           </select>
           <br />
