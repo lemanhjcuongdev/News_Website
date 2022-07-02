@@ -10,6 +10,7 @@
         <title>CQT News</title>
     </head>
     <body>
+        <%-- một hai ba te --%>
         <section class="content">
 
         </section>
@@ -21,3 +22,4 @@
     </body>
     </html>
 </asp:Content>
+
