@@ -11,7 +11,58 @@ namespace BTL_News_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<User> users = (List<User>)Application["Users"];
+            string tkdk = Request.Form["inputTKDK"];
+            string mkdk = Request.Form["inputMKDK"];
+            string mkdkcheck = Request.Form["inputMKCheckDK"];
+            string tkdn = Request.QueryString["inputTK"];
+            string mkdn = Request.QueryString["inputMK"];
 
+            if (tkdn != null && mkdn != null)
+            {
+                Response.Write("12312312312312312");
+                int checkdn = 0;
+                for (int i = 0; i < users.Count; i++)
+                {
+                    if (String.Compare(users[i].Taikhoan,tkdn.ToString(), false) == 0 && String.Compare(users[i].Matkhau, mkdn.ToString(), false) == 0)
+                    {
+                        checkdn++;
+                    }
+                }
+                if(checkdn > 0)
+                {
+                    Response.Write("<script>alert('Đăng nhập thành công')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Tài khoản không tồn tại')</script>");
+                }
+            }
+            else if(tkdk != null && mkdk != null && mkdkcheck != null)
+            {
+                int check = 0;              
+                for (int i=0; i<users.Count; i++)
+                {
+                    if(String.Compare(users[i].Taikhoan, tkdk.ToString(), false) == 0)
+                    {
+                        check++;
+                    }
+                }
+                if (check == 0)
+                {   
+                    users.Add(new User(users.Count+1,tkdk,mkdk,"user"));
+                    HttpCookie mycookie = new HttpCookie("userCookie");
+                    mycookie.Value = "" + tkdk + "&user";
+                    mycookie.Expires = DateTime.Now.AddMinutes(10);
+                    HttpContext.Current.Response.Cookies.Add(mycookie);
+                    Response.Write("<script>alert('Đăng kí thành công')</script>");
+                    System.Threading.Thread.Sleep(2000);
+                }
+                else
+                {
+                    Response.Write("<script>alert('Tài khoản đã tồn tại, vui lòng nhập tài khoản khác!')</script>");
+                }
+            }    
         }
     }
 }

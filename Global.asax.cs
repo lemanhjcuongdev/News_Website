@@ -97,6 +97,12 @@ namespace BTL_News_Website
                 "Mới đây, Bộ Tài chính đã trình thêm phương án giảm thêm thuế tiêu thụ đặc biệt và VAT để kìm giá xăng.", "2022-07-01", "Xã hội", "asset/images/xang.jpg", "#"));
 
             Application["newslist"] = newslist;
+
+            List<User> users = new List<User>();
+            users.Add(new User(1, "admin", "admin123", "admin"));
+            Application["Users"] = users;
+
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
