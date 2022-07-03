@@ -113,6 +113,7 @@
     <Compile Include="trangchu.aspx.designer.cs">
       <DependentUpon>trangchu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HeaderNavFooter.Master" />
