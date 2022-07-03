@@ -17,7 +17,20 @@ namespace BTL_News_Website
             inputID = dsBao.Count +1 ;
             inputTitle = Request.Form["inputTitle"];
             inputContent = Request.Form["inputContent"];
-            //inputImage = Request.Files["inputImage"];
+            inputCategory = Request.Form["inputCategory"];
+            if (inputCategory == "Khoa học & Công nghệ")
+            {
+                inputImage = "asset/images/Science_Technology.jpg";
+            }
+            else if (inputCategory == "Xã hội")
+            {
+                inputImage = "asset/images/society.jpg";
+            }
+            else if (inputCategory == "Thể thao")
+            {
+                inputImage = "asset/images/e_sport.jpg";
+            }
+            else inputImage = "";
         }
     }
 }

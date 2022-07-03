@@ -19,21 +19,39 @@
           <br />
         <textarea name="inputContent" id="inputContent" cols="180" rows="18"></textarea>
           <br />
-        <label>Chọn ảnh cho bài báo: </label>
+        <%--<label>Chọn ảnh cho bài báo: </label>
         <input type="file" name="inputImage" id="inputImage" accept="image/*"/>
-          <br />
+          <br />--%>
           <label>Chọn thể loại: </label>
           <select name="inputCategory" class="category">
               <option value="Khoa học & Công nghệ">Khoa học & Công nghệ</option>
+              <option value="Xã hội">Xã hội</option>
           </select>
           <br />
-          <input type="submit" value="ĐĂNG BÀI">
+          <input id="submit" type="submit" value="ĐĂNG BÀI"/>
       </form>
+    </body>
         <script>
             const cate_Select = document.querySelector(".category");
 
-            cate_Select.innerHTML = <%= Session["cate_list"] %>;
+            cate_Select.innerHTML = "";
+
+            const inputTitle = document.querySelector("#inputTitle");
+            const inputContent = document.querySelector("#inputContent");
+            const btnSubmit = document.querySelector("#submit");
+
+            btnSubmit.addEventListener("click", function () {
+                let noti = "";
+                if (inputTitle.value.trim() == "") {
+                    noti += "Tiêu đề không được trống. ";
+                }
+                if (inputContent.value.trim() == "") {
+                    noti += "Nội dung không được trống. ";
+                }
+                if (noti != "") {
+                    alert(noti);
+                }
+            })
         </script>
-    </body>
     </html>
 </asp:Content>

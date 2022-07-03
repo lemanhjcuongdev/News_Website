@@ -68,6 +68,9 @@
     <Content Include="asset\css\dangbai_style.css" />
     <Content Include="asset\css\header_nav_footer_style.css" />
     <Content Include="asset\css\trangchu_style.css" />
+    <Content Include="asset\images\e_sport.jpg" />
+    <Content Include="asset\images\Science_Technology.jpg" />
+    <Content Include="asset\images\society.jpg" />
     <Content Include="asset\images\xang.jpg" />
     <Content Include="asset\images\Zalo1.jpg" />
     <Content Include="dangbai.aspx" />
@@ -113,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HeaderNavFooter.Master" />
+    <Content Include="asset\images\society.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
