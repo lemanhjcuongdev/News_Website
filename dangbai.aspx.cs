@@ -10,27 +10,41 @@ namespace BTL_News_Website
     public partial class dangbai : System.Web.UI.Page
     {
         private int inputID;
-        private string inputTitle, inputContent, inputImage, inputCategory, inputTime, inputUrl;
+        private string inputTitle, inputContent, inputImage, inputCategory, inputUrl;
+        private DateTime inputTime;
+        string fileName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<News> dsBao = Application["newslist"] as List<News>;
-            inputID = dsBao.Count +1 ;
+            
             inputTitle = Request.Form["inputTitle"];
             inputContent = Request.Form["inputContent"];
+            inputTime = DateTime.Now;
             inputCategory = Request.Form["inputCategory"];
-            if (inputCategory == "Khoa học & Công nghệ")
+
+
+            
+
+            if (inputTitle != null)
             {
-                inputImage = "asset/images/Science_Technology.jpg";
+                List<News> dsBao = Application["newslist"] as List<News>;
+                inputID = dsBao.Count + 1;
+
+                saveFile(Request.Files["inputImage"], Request.MapPath("~/asset/images/"));
+                inputImage = "/asset/images/" + fileName;
+                Response.Write(inputImage);
+                inputUrl = "#";
+
+                dsBao.Add(new News(inputID, inputTitle, inputContent, inputTime, inputCategory, inputImage, inputUrl));
+                Application["newslist"] = dsBao;
+                Response.Redirect("trangchu.aspx");
             }
-            else if (inputCategory == "Xã hội")
-            {
-                inputImage = "asset/images/society.jpg";
-            }
-            else if (inputCategory == "Thể thao")
-            {
-                inputImage = "asset/images/e_sport.jpg";
-            }
-            else inputImage = "";
+
+        }
+        public void saveFile(HttpPostedFile file, string path)
+        {
+            fileName = file.FileName;
+            string filePath = path + fileName;
+            file.SaveAs(filePath);
         }
     }
 }

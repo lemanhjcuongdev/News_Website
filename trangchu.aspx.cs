@@ -24,7 +24,7 @@ namespace BTL_News_Website
                     "<img src='"+dsBao[i].Image+"' />" +
                     "<p class='title'>"+dsBao[i].Title+"</p>" +
                     "<section class='description'>" +
-                    "<p class='time'>"+dsBao[i].Time+ " ngày trước • </p>" +
+                    "<p class='time'>"+dsBao[i].Time+ "  • </p>" +
                     "<p class='category'>"+dsBao[i].Category+"</p>" +
                     "</section>" +
                     "</a>" +
