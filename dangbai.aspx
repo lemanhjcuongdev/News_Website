@@ -28,7 +28,7 @@
               <option value="Xã hội">Xã hội</option>
           </select>
           <br />
-          <input id="submit" type="submit" value="ĐĂNG BÀI"/>
+          <input id="submit" type="button" value="ĐĂNG BÀI"/>
       </form>
     </body>
         <script>

@@ -12,7 +12,7 @@ textarea {
 select option p{
     font-size: 20px;
 }
-input[type="submit"] {
+input[type="button"] {
     padding: 18px 44px;
     font-size: 18px;
     font-weight: 500;
