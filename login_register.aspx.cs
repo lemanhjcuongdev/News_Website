@@ -20,13 +20,13 @@ namespace BTL_News_Website
 
             if (tkdn != null && mkdn != null)
             {
-                Response.Write("12312312312312312");
                 int checkdn = 0;
                 for (int i = 0; i < users.Count; i++)
                 {
                     if (String.Compare(users[i].Taikhoan,tkdn.ToString(), false) == 0 && String.Compare(users[i].Matkhau, mkdn.ToString(), false) == 0)
                     {
                         checkdn++;
+                        Response.Redirect("trangchu");
                     }
                 }
                 if(checkdn > 0)
