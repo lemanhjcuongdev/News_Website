@@ -26,7 +26,7 @@ namespace BTL_News_Website
                     if (String.Compare(users[i].Taikhoan,tkdn.ToString(), false) == 0 && String.Compare(users[i].Matkhau, mkdn.ToString(), false) == 0)
                     {
                         checkdn++;
-                        Response.Redirect("trangchu");
+                        //Response.Redirect("trangchu");
                     }
                 }
                 if(checkdn > 0)
@@ -51,6 +51,8 @@ namespace BTL_News_Website
                 if (check == 0)
                 {   
                     users.Add(new User(users.Count+1,tkdk,mkdk,"user"));
+                    Application["Users"] = users;
+
                     HttpCookie mycookie = new HttpCookie("userCookie");
                     mycookie.Value = "" + tkdk + "&user";
                     mycookie.Expires = DateTime.Now.AddMinutes(10);
