@@ -15,42 +15,48 @@ namespace BTL_News_Website
             string tkdk = Request.Form["inputTKDK"];
             string mkdk = Request.Form["inputMKDK"];
             string mkdkcheck = Request.Form["inputMKCheckDK"];
-            string tkdn = Request.QueryString["inputTK"];
-            string mkdn = Request.QueryString["inputMK"];
+            string tkdn = Request.Form["inputTK"];
+            string mkdn = Request.Form["inputMK"];
 
             if (tkdn != null && mkdn != null)
             {
-                Response.Write("12312312312312312");
                 int checkdn = 0;
+                int index = 0;
                 for (int i = 0; i < users.Count; i++)
                 {
-                    if (String.Compare(users[i].Taikhoan,tkdn.ToString(), false) == 0 && String.Compare(users[i].Matkhau, mkdn.ToString(), false) == 0)
+                    if (String.Compare(users[i].Taikhoan, tkdn.ToString(), false) == 0 && String.Compare(users[i].Matkhau, mkdn.ToString(), false) == 0)
                     {
+                        index = i;
                         checkdn++;
                     }
                 }
-                if(checkdn > 0)
+                if (checkdn > 0)
                 {
-                    Response.Write("<script>alert('Đăng nhập thành công')</script>");
+                    HttpCookie mycookieDN = new HttpCookie("userCookie");
+                    mycookieDN.Value = "" + tkdn + "&role=" + users[index].Role;
+                    mycookieDN.Expires = DateTime.Now.AddMinutes(10);
+                    HttpContext.Current.Response.Cookies.Add(mycookieDN);
+                    Response.Redirect("trangchu.aspx");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Tài khoản không tồn tại')</script>");
+                    Response.Write("<script>alert('Sai tài khoản hoặc mật khẩu')</script>");
                 }
             }
-            else if(tkdk != null && mkdk != null && mkdkcheck != null)
+
+            else if (tkdk != null && mkdk != null && mkdkcheck != null)
             {
-                int check = 0;              
-                for (int i=0; i<users.Count; i++)
+                int check = 0;
+                for (int i = 0; i < users.Count; i++)
                 {
-                    if(String.Compare(users[i].Taikhoan, tkdk.ToString(), false) == 0)
+                    if (String.Compare(users[i].Taikhoan, tkdk.ToString(), false) == 0)
                     {
                         check++;
                     }
                 }
                 if (check == 0)
-                {   
-                    users.Add(new User(users.Count+1,tkdk,mkdk,"user"));
+                {
+                    users.Add(new User(users.Count + 1, tkdk, mkdk, "user"));
                     HttpCookie mycookie = new HttpCookie("userCookie");
                     mycookie.Value = "" + tkdk + "&user";
                     mycookie.Expires = DateTime.Now.AddMinutes(10);
@@ -62,7 +68,7 @@ namespace BTL_News_Website
                 {
                     Response.Write("<script>alert('Tài khoản đã tồn tại, vui lòng nhập tài khoản khác!')</script>");
                 }
-            }    
+            }
         }
     }
 }
