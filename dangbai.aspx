@@ -10,30 +10,52 @@
       <title>Document</title>
     </head>
     <body>
-      <form class="dangbai" action="dangbai.aspx" method="post">
+      <form class="dangbai" action="dangbai.aspx" method="post" enctype="multipart/form-data">
         <label>Nhập tiêu đề bài báo</label>
           <br />
-        <textarea name="inputTitle" id="inputTitle" cols="180" rows="4"></textarea>
+        <textarea name="inputTitle" id="inputTitle" cols="180" rows="4" required="required"></textarea>
           <br />
         <label>Nhập nội dung bài báo</label>
           <br />
-        <textarea name="inputContent" id="inputContent" cols="180" rows="18"></textarea>
+        <textarea name="inputContent" id="inputContent" cols="180" rows="18" required="required"></textarea>
           <br />
         <label>Chọn ảnh cho bài báo: </label>
-        <input type="file" name="inputImage" id="inputImage" accept="image/*"/>
-          <br />
-          <label>Chọn thể loại: </label>
-          <select name="inputCategory" class="category">
-              <option value="Khoa học & Công nghệ">Khoa học & Công nghệ</option>
-          </select>
-          <br />
-          <input type="submit" value="ĐĂNG BÀI">
+        <input type="file" name="inputImage" id="inputImage" accept="image/*" required="required"/>
+        <br />
+        <label>Chọn thể loại: </label>
+        <select name="inputCategory" class="category">
+            <option value="Khoa học & Công nghệ">Khoa học & Công nghệ</option>
+            <option value="Xã hội">Xã hội</option>
+            <option value="E-sport">E-sport</option>
+        </select>
+        <br />
+        <%--<input id="submit" type="submit" value="ĐĂNG BÀI"/>--%>
+          <button id="submit" type="submit">ĐĂNG BÀI</button>
       </form>
+    </body>
         <script>
             const cate_Select = document.querySelector(".category");
-
-            cate_Select.innerHTML = <%= Session["cate_list"] %>;
+            const inputTitle = document.querySelector("#inputTitle");
+            const inputContent = document.querySelector("#inputContent");
+            const btnSubmit = document.querySelector("#submit");
+            const formDangBai = document.querySelector(".dangbai")
+            //btnSubmit.addEventListener("click", function (e) {
+            //    e.preventDefault();
+            //    let noti = "";
+            //    if (inputTitle.value.trim() == "") {
+            //        noti += "Tiêu đề không được trống. ";
+            //    }
+            //    if (inputContent.value.trim() == "") {
+            //        noti += "Nội dung không được trống. ";
+            //    }
+            //    if (noti != "") {
+            //        /*                    e.preventDefault();*/
+            //        alert(noti);
+            //    } else {
+            //        console.log("Alo123");
+            //        formDangBai.submit();
+            //    }
+            //})
         </script>
-    </body>
     </html>
 </asp:Content>

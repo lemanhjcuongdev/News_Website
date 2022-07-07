@@ -57,8 +57,9 @@
   grid-column: 5/7;
 }
 
-.item:nth-child(3) img, .item:nth-child(4) img, .item:nth-child(5) img, {
+.item:nth-child(3) img, .item:nth-child(4) img, .item:nth-child(5) img {
     height: 274px;
+    object-fit: cover;
 }
 
 .item:nth-child(n+6) {
@@ -72,7 +73,9 @@
 }
 
 .item:nth-child(n+6) img {
-  width: 22%;
+  width: 18%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .item:nth-child(n+6) p {
@@ -88,6 +91,9 @@
   margin-top: 10px;
   display: flex;
   font-size: 14px;
+}
+.item:nth-child(n+6) .description {
+    margin-top: 0px;
 }
 
 .item .description .category {

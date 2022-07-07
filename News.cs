@@ -8,9 +8,10 @@ namespace BTL_News_Website
     public class News
     {
         private int id;
-        private string title, content, time, category, image, url;
+        private string title, content, category, image, url;
+        private DateTime time;
 
-        public News(int id, string title, string content, string time, string category, string image, string url)
+        public News(int id, string title, string content, DateTime time, string category, string image, string url)
         {
             this.id = id;
             this.title = title;
@@ -24,7 +25,7 @@ namespace BTL_News_Website
         public int Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
         public string Content { get => content; set => content = value; }
-        public string Time { get => time; set => time = value; }
+        public DateTime Time { get => time; set => time = value; }
         public string Category { get => category; set => category = value; }
         public string Image { get => image; set => image = value; }
         public string Url { get => url; set => url = value; }

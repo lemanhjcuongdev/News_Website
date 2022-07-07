@@ -28,6 +28,7 @@ namespace BTL_News_Website
                     {
                         index = i;
                         checkdn++;
+                        //Response.Redirect("trangchu");
                     }
                 }
                 if (checkdn > 0)
