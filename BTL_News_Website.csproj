@@ -68,12 +68,14 @@
     <Content Include="asset\css\dangbai_style.css" />
     <Content Include="asset\css\header_nav_footer_style.css" />
     <Content Include="asset\css\trangchu_style.css" />
+    <Content Include="asset\css\trangconchitiet_style.css" />
     <Content Include="asset\images\xang.jpg" />
     <Content Include="asset\images\Zalo1.jpg" />
     <Content Include="dangbai.aspx" />
     <Content Include="Global.asax" />
     <Content Include="login_register.aspx" />
     <Content Include="trangchu.aspx" />
+    <Content Include="trangconchitiet.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +111,13 @@
     </Compile>
     <Compile Include="trangchu.aspx.designer.cs">
       <DependentUpon>trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangconchitiet.aspx.cs">
+      <DependentUpon>trangconchitiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangconchitiet.aspx.designer.cs">
+      <DependentUpon>trangconchitiet.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
   </ItemGroup>

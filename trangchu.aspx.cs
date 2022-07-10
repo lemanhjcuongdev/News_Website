@@ -20,7 +20,7 @@ namespace BTL_News_Website
             for(int i = 0; i < dsBao.Count; i++)
             {
                 sHTML += "<section class='item'>" +
-                    "<a href='#'>" +
+                    "<a href='trangconchitiet.aspx?id=" + dsBao[i].Id + "'>" +
                     "<img src='"+dsBao[i].Image+"' />" +
                     "<p class='title'>"+dsBao[i].Title+"</p>" +
                     "<section class='description'>" +
