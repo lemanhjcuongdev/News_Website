@@ -14,15 +14,15 @@ namespace BTL_News_Website
             var ID = Request.QueryString["id"];
             if (ID != null)
             {
-                Response.Write(ID);
+                //Response.Write(ID);
                 List<News> dsBao = Application["newslist"] as List<News>;
                 string sHTML = "";
                 for(int i = 0; i<dsBao.Count; i++)
                 {
-                    Response.Write(dsBao[i].Id);
+                    //Response.Write(dsBao[i].Id);
                     if (dsBao[i].Id == int.Parse(ID))
                     {
-                        Response.Write(dsBao[i].Id);
+                        //Response.Write(dsBao[i].Id);
                         sHTML += "<div class='head'>" +
                         "<p> Tin tức </p>" + "<h1>" + dsBao[i].Title + "</h1>" +
                         "</div>" + "<div class='description'>" + "<img src='" + dsBao[i].Image + "'/>" +
