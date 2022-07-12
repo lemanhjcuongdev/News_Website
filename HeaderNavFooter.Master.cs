@@ -21,15 +21,15 @@ namespace BTL_News_Website
                 string sHTML = "";
                 for (int i = 0; i < dsBao.Count; i++)
                 {
-                    if(dsBao[i].Title.ToLower().Contains(inputSearch.ToLower()) == true)
+                    if(dsBao[i].Title.ToLower().Contains(inputSearch.ToLower()) == true || dsBao[i].Content.ToLower().Contains(inputSearch.ToLower()) == true)
                     {
                         count++;
                         sHTML += "<section class='item'>" +
-                        "<a href='#'>" +
+                        "<a href='trangconchitiet.aspx?id=" + dsBao[i].Id + "'>" +
                         "<img src='" + dsBao[i].Image + "' />" +
                         "<p class='title'>" + dsBao[i].Title + "</p>" +
                         "<section class='description'>" +
-                        "<p class='time'>" + dsBao[i].Time + " ngày trước • </p>" +
+                        "<p class='time'>" + dsBao[i].Time + "  • </p>" +
                         "<p class='category'>" + dsBao[i].Category + "</p>" +
                         "</section>" +
                         "</a>" +
@@ -38,10 +38,12 @@ namespace BTL_News_Website
                 }
                 if(count == 0)
                 {
+                    sHTML += "<h2 style='font-size: 44px'>Không tìm thấy bài báo nào với từ khóa: '" + inputSearch + "'</h2>";
+                    //Response.Write("<script>alert('Không tìm thấy bài báo nào với từ khóa: " + inputSearch + "')</script>");
                     //Response.Redirect("trangchu.aspx");
-                    Response.Write("<script>alert('Không tìm thấy bài báo nào với từ khóa: " + inputSearch + "')</script>");
                 } else
                 {
+                    sHTML = "<h2 style='font-size: 44px'>Có tổng cộng " + count + " bài báo chứa từ khóa: '" + inputSearch + "'</h2>" + sHTML;
                     //Response.Write("<script>alert('Có tổng cộng " + count + " bài báo')</script>");
                 }
                 Session["renderNewsList"] = sHTML;
