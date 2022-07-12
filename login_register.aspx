@@ -12,7 +12,7 @@
             <tr>
                 <td>
                     <h1>Đăng nhập</h1>
-                    <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>
+                    <%--<p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>--%>
                     <form id="formdn" method ="post" action="#">
                         <label>Tài khoản: </label> 
                         <input type ="text" class ="taikhoan" name="inputTK" /><br />
@@ -24,7 +24,7 @@
 
                 <td>
                     <h1>Đăng ký</h1>
-                    <p>Nếu chưa có tài khoản, đăng ký ngay!</p>
+<%--                    <p>Nếu chưa có tài khoản, đăng ký ngay!</p>--%>
                     <form id="form2" method ="post" action="#">
                         <label>Tài khoản: </label> 
                         <input type ="text" class ="taikhoan1" name="inputTKDK" /><br />

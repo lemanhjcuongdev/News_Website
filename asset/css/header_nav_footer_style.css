@@ -45,7 +45,8 @@ header nav ul li a{
     border-bottom: 4px solid #cccccc;
 
 }*/
-header nav ul li a.link.personal{
+header nav ul li a.link.personal.active{
+    display: inline-block;
     font-size: 22px;
 }
 header nav ul li a:hover{
@@ -96,5 +97,23 @@ hr{
 footer ul.child_footer2 li a {
     text-decoration: none;
     color: #1773EA;
+}
+/*hide/show*/
+header nav ul li.publish{
+    display: none;
+}
+header nav ul li.logout {
+    display: none;
+}
+header nav ul li.publish.active {
+    display: inline-block;
+    font-size: 22px;
+}
+header nav ul li.logout.active {
+    display: inline-block;
+    font-size: 22px;
+}
+header nav ul li a.link.personal {
+    display:none;
 }
 

@@ -52,6 +52,14 @@
                             <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
+                    <li class="publish">
+                        <a href="dangbai.aspx" title="Đăng bài">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </li>
                 </ul>
             </nav>
             </header>
@@ -84,5 +92,21 @@
                     </li>
                 </ul>
             </footer>
+    <script>
+        const publishBtn = document.querySelector(".publish");
+        const logoutBtn = document.querySelector(".logout");
+        const personalBtn = document.querySelector(".link.personal")
+
+        console.log(document.cookie.slice(11,16));
+        if (document.cookie.slice(11, 16) == "admin") {
+            publishBtn.classList.add("active");
+            logoutBtn.classList.add("active");
+            personalBtn.classList.remove("active");
+        } else {
+            publishBtn.classList.remove("active");
+            logoutBtn.classList.remove("active");
+            personalBtn.classList.add("active");
+        }
+    </script>
     </body>
 </html>

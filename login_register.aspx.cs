@@ -34,7 +34,7 @@ namespace BTL_News_Website
                 if (checkdn > 0)
                 {
                     HttpCookie mycookieDN = new HttpCookie("userCookie");
-                    mycookieDN.Value = "" + tkdn + "&role=" + users[index].Role;
+                    mycookieDN.Value = "" + tkdn;
                     mycookieDN.Expires = DateTime.Now.AddMinutes(10);
                     HttpContext.Current.Response.Cookies.Add(mycookieDN);
                     Response.Redirect("trangchu.aspx");
@@ -59,7 +59,7 @@ namespace BTL_News_Website
                 {
                     users.Add(new User(users.Count + 1, tkdk, mkdk, "user"));
                     HttpCookie mycookie = new HttpCookie("userCookie");
-                    mycookie.Value = "" + tkdk + "&user";
+                    mycookie.Value = "" + tkdk;
                     mycookie.Expires = DateTime.Now.AddMinutes(10);
                     HttpContext.Current.Response.Cookies.Add(mycookie);
                     Response.Write("<script>alert('Đăng kí thành công')</script>");
