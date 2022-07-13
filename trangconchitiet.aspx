@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeaderNavFooter.Master" AutoEventWireup="true" CodeBehind="trangconchitiet.aspx.cs" Inherits="BTL_News_Website.trangconchitiet" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeaderNavFooter.Master" AutoEventWireup="true" CodeBehind="trangconchitiet.aspx.cs" Inherits="BTL_News_Website.trangconchitiet" ValidateRequest="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
