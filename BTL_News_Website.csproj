@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asset\css\category_page_style.css" />
     <Content Include="asset\css\dangbai_style.css" />
     <Content Include="asset\css\header_nav_footer_style.css" />
     <Content Include="asset\css\trangchu_style.css" />
@@ -81,11 +82,14 @@
     <Content Include="asset\images\Zalo1.jpg" />
     <Content Include="dangbai.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="khoahoc_congnghe.aspx" />
     <Content Include="login_register.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="thethao.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="trangconchitiet.aspx" />
     <Content Include="Web.config" />
+    <Content Include="xahoi.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dangbai.aspx.cs">
@@ -105,6 +109,13 @@
     <Compile Include="HeaderNavFooter.Master.designer.cs">
       <DependentUpon>HeaderNavFooter.Master</DependentUpon>
     </Compile>
+    <Compile Include="khoahoc_congnghe.aspx.cs">
+      <DependentUpon>khoahoc_congnghe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khoahoc_congnghe.aspx.designer.cs">
+      <DependentUpon>khoahoc_congnghe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login_register.aspx.cs">
       <DependentUpon>login_register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +132,13 @@
     </Compile>
     <Compile Include="News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="thethao.aspx.cs">
+      <DependentUpon>thethao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thethao.aspx.designer.cs">
+      <DependentUpon>thethao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="trangchu.aspx.cs">
       <DependentUpon>trangchu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +154,13 @@
       <DependentUpon>trangconchitiet.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="xahoi.aspx.cs">
+      <DependentUpon>xahoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xahoi.aspx.designer.cs">
+      <DependentUpon>xahoi.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="HeaderNavFooter.Master" />

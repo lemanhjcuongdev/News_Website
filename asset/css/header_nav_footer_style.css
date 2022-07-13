@@ -111,7 +111,9 @@ header nav ul li.publish.active {
 }
 header nav ul li.logout.active {
     display: inline-block;
-    font-size: 22px;
+}
+header nav ul li.logout.active form button {
+    font-size:22px;
 }
 header nav ul li a.link.personal {
     display:none;
