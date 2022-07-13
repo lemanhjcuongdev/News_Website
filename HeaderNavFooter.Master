@@ -58,7 +58,13 @@
                         </a>
                     </li>
                     <li class="logout">
-                        <i class="fa-solid fa-right-from-bracket"></i>
+                        
+                            <form action="logout.aspx" method="post" id="form1806">
+                                <button type="submit">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </button>
+                            </form>
+                        
                     </li>
                 </ul>
             </nav>

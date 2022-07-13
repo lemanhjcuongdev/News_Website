@@ -74,6 +74,7 @@
     <Content Include="dangbai.aspx" />
     <Content Include="Global.asax" />
     <Content Include="login_register.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="trangconchitiet.aspx" />
     <Content Include="Web.config" />
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="login_register.aspx.designer.cs">
       <DependentUpon>login_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -26,7 +26,7 @@
         <select name="inputCategory" class="category">
             <option value="Khoa học & Công nghệ">Khoa học & Công nghệ</option>
             <option value="Xã hội">Xã hội</option>
-            <option value="E-sport">E-sport</option>
+            <option value="E-sport">Thể thao</option>
         </select>
         <br />
         <%--<input id="submit" type="submit" value="ĐĂNG BÀI"/>--%>
