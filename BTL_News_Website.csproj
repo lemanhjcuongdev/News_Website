@@ -69,6 +69,14 @@
     <Content Include="asset\css\header_nav_footer_style.css" />
     <Content Include="asset\css\trangchu_style.css" />
     <Content Include="asset\css\trangconchitiet_style.css" />
+    <Content Include="asset\images\kd3.jpg" />
+    <Content Include="asset\images\t1.jpg" />
+    <Content Include="asset\images\t7.jpg" />
+    <Content Include="asset\images\t9.jpg" />
+    <Content Include="asset\images\tg2.jpg" />
+    <Content Include="asset\images\tt1.jpg" />
+    <Content Include="asset\images\tt2.jpg" />
+    <Content Include="asset\images\tt7.jpg" />
     <Content Include="asset\images\xang.jpg" />
     <Content Include="asset\images\Zalo1.jpg" />
     <Content Include="dangbai.aspx" />
