@@ -15,8 +15,8 @@ namespace BTL_News_Website
         string fileName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            inputTitle = Request.Form["inputTitle"];
-            inputContent = Request.Form["inputContent"];
+            inputTitle = Server.HtmlEncode(Request.Form["inputTitle"]);
+            inputContent = Server.HtmlEncode(Request.Form["inputContent"]);
             inputTime = DateTime.Now;
             inputCategory = Request.Form["inputCategory"];
 

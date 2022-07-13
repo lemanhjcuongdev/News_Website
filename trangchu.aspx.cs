@@ -22,7 +22,7 @@ namespace BTL_News_Website
                 sHTML += "<section class='item'>" +
                     "<a href='trangconchitiet.aspx?id=" + dsBao[i].Id + "'>" +
                     "<img src='"+dsBao[i].Image+"' />" +
-                    "<p class='title'>"+dsBao[i].Title+"</p>" +
+                    "<p class='title'>"+ Server.HtmlDecode(dsBao[i].Title)+"</p>" +
                     "<section class='description'>" +
                     "<p class='time'>"+dsBao[i].Time+ "  • </p>" +
                     "<p class='category'>"+dsBao[i].Category+"</p>" +

@@ -24,9 +24,9 @@ namespace BTL_News_Website
                     {
                         //Response.Write(dsBao[i].Id);
                         sHTML += "<div class='head'>" +
-                        "<p> Tin tức </p>" + "<h1>" + dsBao[i].Title + "</h1>" +
+                        "<p> Tin tức </p>" + "<h1>" + Server.HtmlDecode(dsBao[i].Title) + "</h1>" +
                         "</div>" + "<div class='description'>" + "<img src='" + dsBao[i].Image + "'/>" +
-                        "<p class='title'>" + dsBao[i].Content + "</p>" + "</div>";
+                        "<p class='title'>" + Server.HtmlDecode(dsBao[i].Content) + "</p>" + "</div>";
 
                     }
                 }
