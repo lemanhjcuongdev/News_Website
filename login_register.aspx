@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class ="bodyTCCT">
-    <table >
+    <table>
         <tr>
             <td class ="tableTCCT">
                 <div class="formdn">
-                <h1 style = "width: 100&;">Đăng nhập</h1>
+                <h1 style = "width: 100%; font-size: 26px">Đăng nhập</h1>
                 <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>
                 <form id="formdn" method ="post" action="#">
                     <label>Tài khoản: </label> 
@@ -30,7 +30,7 @@
 
             <td class ="tableTCCT">
                 <div class="formdky">
-                <h1>Đăng ký</h1>
+                <h1 style = "width: 100%; font-size: 26px">Đăng ký</h1>
                 <p>Nếu chưa có tài khoản, đăng ký ngay!</p>
                 <form id="form2" method ="post" action="#">
                     <label>Tài khoản: </label> 

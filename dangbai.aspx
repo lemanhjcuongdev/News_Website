@@ -29,8 +29,8 @@
             <option value="E-sport">Thể thao</option>
         </select>
         <br />
-        <%--<input id="submit" type="submit" value="ĐĂNG BÀI"/>--%>
-          <button id="submit" type="submit">ĐĂNG BÀI</button>
+        <input id="submit" type="submit" value="ĐĂNG BÀI"/>
+<%--          <button id="submit" type="submit">ĐĂNG BÀI</button>--%>
       </form>
     </body>
         <script>
