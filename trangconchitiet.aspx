@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="asset/css/trangconchitiet_style.css">
 </head>
 <body>
-    <div class="container1">       
+    <div class="container1" style = "width: 100%;">       
     </div>
 </body>
 <script>

@@ -1,0 +1,18 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.bodyTCCT {
+    margin: 0 auto;
+    height: 50vh;
+}
+
+.formdn {
+    margin-right: 20px;
+}
+
+.tableTCCT * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

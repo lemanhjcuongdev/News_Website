@@ -6,37 +6,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Đăng nhập Đăng ký</title>
+        <link rel="stylesheet" href="asset/css/login_register_style.css">
 </head>
-<body style="display:block">
-        <table>
-            <tr>
-                <td>
-                    <h1>Đăng nhập</h1>
-                    <%--<p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>--%>
-                    <form id="formdn" method ="post" action="#">
-                        <label>Tài khoản: </label> 
-                        <input type ="text" class ="taikhoan" name="inputTK" /><br />
-                        <label>Mật khẩu: </label> 
-                        <input type ="text" class ="matkhau" name="inputMK" /><br />
-                        <button type="submit" id="btnDangNhap">ĐĂNG NHẬP</button>
-                    </form>
-                </td>
+<body>
+    <div class ="bodyTCCT">
+    <table >
+        <tr>
+            <td class ="tableTCCT">
+                <div class="formdn">
+                <h1 style = "width: 100&;">Đăng nhập</h1>
+                <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>
+                <form id="formdn" method ="post" action="#">
+                    <label>Tài khoản: </label> 
+                    <input type ="text" class ="taikhoan" name="inputTK" /><br />
+                    <label>Mật khẩu: </label> 
+                    <input type ="password" class ="matkhau" name="inputMK" /><br />
+                    <label>    </label> 
+                    <input style="visibility:hidden;" type ="password" class ="check123" name="inputMKCheckDK" /><br />
+                    <button type="submit" id="btnDangNhap">ĐĂNG NHẬP</button>
+                </form>
+                </div>
+            </td>
 
-                <td>
-                    <h1>Đăng ký</h1>
-<%--                    <p>Nếu chưa có tài khoản, đăng ký ngay!</p>--%>
-                    <form id="form2" method ="post" action="#">
-                        <label>Tài khoản: </label> 
-                        <input type ="text" class ="taikhoan1" name="inputTKDK" /><br />
-                        <label>Mật khẩu: </label> 
-                        <input type ="text" class ="matkhau1" name="inputMKDK" /><br />
-                        <label>Nhập lại mật khẩu: </label> 
-                        <input type ="text" class ="check" name="inputMKCheckDK" /><br />
-                        <button class ="dangky" type ="submit"> ĐĂNG KÝ</button>
-                    </form>
-                </td>
-             </tr>
-        </table>
+            <td class ="tableTCCT">
+                <div class="formdky">
+                <h1>Đăng ký</h1>
+                <p>Nếu chưa có tài khoản, đăng ký ngay!</p>
+                <form id="form2" method ="post" action="#">
+                    <label>Tài khoản: </label> 
+                    <input type ="text" class ="taikhoan1" name="inputTKDK" /><br />
+                    <label>Mật khẩu: </label> 
+                    <input type ="password" class ="matkhau1" name="inputMKDK" /><br />
+                    <label>Nhập lại mật khẩu: </label> 
+                    <input type ="password" class ="check" name="inputMKCheckDK" /><br />
+                    <button class ="dangky" type ="submit"> ĐĂNG KÝ</button>
+                </form>
+                </div>
+            </td>
+         </tr>
+    </table>
+    </div>
 </body>
     <script>
         const tkDN = document.querySelector(".taikhoan");
