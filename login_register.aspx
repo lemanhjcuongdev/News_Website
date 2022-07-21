@@ -15,7 +15,7 @@
             <td class ="tableTCCT">
                 <div class="formdn">
                 <h1 style = "width: 100%; font-size: 26px">Đăng nhập</h1>
-                <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>
+<%--                <p>Nếu bạn đã có tài khoản thì hãy đăng nhập để đăng báo</p>--%>
                 <form id="formdn" method ="post" action="#">
                     <label>Tài khoản: </label> 
                     <input type ="text" class ="taikhoan" name="inputTK" /><br />
@@ -31,7 +31,7 @@
             <td class ="tableTCCT">
                 <div class="formdky">
                 <h1 style = "width: 100%; font-size: 26px">Đăng ký</h1>
-                <p>Nếu chưa có tài khoản, đăng ký ngay!</p>
+<%--                <p>Nếu chưa có tài khoản, đăng ký ngay!</p>--%>
                 <form id="form2" method ="post" action="#">
                     <label>Tài khoản: </label> 
                     <input type ="text" class ="taikhoan1" name="inputTKDK" /><br />
@@ -57,6 +57,17 @@
         var btnDK = document.querySelector('button[class="dangky"]')
         const formDK = document.querySelector('#form2')
         const formDN = document.querySelector('#formdn')
+
+        mkDK.addEventListener("change", () => {
+            //var regexp = /(?=.*[A-Z])/;
+            var regexp = /(?=.*[0-9])/;
+             //var regexp = /(?=.*[!@#$%^&*])/;
+            console.log(mkDK.value);
+            console.log(regexp.test(mkDK.value.trim()));
+            console.log(mkDK.value.trim().match(regexp));
+            //dùng match để tìm kiếm
+        })
+        
 
         btnDN.addEventListener('click', function (e) {
             e.preventDefault();

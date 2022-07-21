@@ -97,7 +97,7 @@ namespace BTL_News_Website
             users.Add(new User(1, "admin", "admin123", "admin"));
             Application["Users"] = users;
 
-
+            //Application["session_counter"] = 0;
         }
 
         protected void Session_Start(object sender, EventArgs e)

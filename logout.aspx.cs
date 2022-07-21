@@ -15,6 +15,12 @@ namespace BTL_News_Website
             Request.Cookies["userCookie"].Value = null;
             Request.Cookies["userCookie"].Expires = DateTime.Now.AddMinutes(-1);
             HttpContext.Current.Response.Cookies.Add(Request.Cookies["userCookie"]);
+
+            //int count = (int)Application["session_counter"];
+            //if (count > 0)
+            //    count--;
+            //Application["session_counter"] = count;
+
             Response.Redirect("trangchu.aspx");
         }
     }

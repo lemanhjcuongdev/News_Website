@@ -11,6 +11,7 @@ namespace BTL_News_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "Thể thao - Báo điện tử CQT - CQT News";
             List<News> news = (List<News>)Application["newslist"];
             List<News> tt = new List<News>();
 

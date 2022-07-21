@@ -15,6 +15,8 @@ namespace BTL_News_Website
         string fileName;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "Đăng báo - Báo điện tử CQT - CQT News";
+
             inputTitle = Server.HtmlEncode(Request.Form["inputTitle"]);
             inputContent = Server.HtmlEncode(Request.Form["inputContent"]);
             inputTime = DateTime.Now;
@@ -32,7 +34,7 @@ namespace BTL_News_Website
 
                 dsBao.Add(new News(inputID, inputTitle, inputContent, inputTime, inputCategory, inputImage, inputUrl));
                 Application["newslist"] = dsBao;
-                Response.Redirect("trangchu.aspx");
+                Response.Redirect("trangchu.aspx#"+inputID);
             }
 
         }

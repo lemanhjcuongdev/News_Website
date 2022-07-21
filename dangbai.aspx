@@ -39,23 +39,15 @@
             const inputContent = document.querySelector("#inputContent");
             const btnSubmit = document.querySelector("#submit");
             const formDangBai = document.querySelector(".dangbai")
-            //btnSubmit.addEventListener("click", function (e) {
-            //    e.preventDefault();
-            //    let noti = "";
-            //    if (inputTitle.value.trim() == "") {
-            //        noti += "Tiêu đề không được trống. ";
-            //    }
-            //    if (inputContent.value.trim() == "") {
-            //        noti += "Nội dung không được trống. ";
-            //    }
-            //    if (noti != "") {
-            //        /*                    e.preventDefault();*/
-            //        alert(noti);
-            //    } else {
-            //        console.log("Alo123");
-            //        formDangBai.submit();
-            //    }
-            //})
+            inputTitle.addEventListener("change", function () {
+                var itemArray = inputTitle.value.split(" ");
+                console.log(itemArray);
+                if (itemArray.length < 3) {
+                    alert("Tiêu đề tối thiểu phải có 3 từ!");
+                }
+            })
+
+
         </script>
     </html>
 </asp:Content>

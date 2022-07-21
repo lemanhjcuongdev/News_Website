@@ -11,6 +11,8 @@ namespace BTL_News_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "Đăng ký, đăng nhập - Báo điện tử CQT - CQT News";
+
             List<User> users = (List<User>)Application["Users"];
             string tkdk = Request.Form["inputTKDK"];
             string mkdk = Request.Form["inputMKDK"];
@@ -37,6 +39,7 @@ namespace BTL_News_Website
                     mycookieDN.Value = "" + tkdn;
                     mycookieDN.Expires = DateTime.Now.AddMinutes(10);
                     HttpContext.Current.Response.Cookies.Add(mycookieDN);
+
                     Response.Redirect("trangchu.aspx");
                 }
                 else
@@ -62,6 +65,7 @@ namespace BTL_News_Website
                     mycookie.Value = "" + tkdk;
                     mycookie.Expires = DateTime.Now.AddMinutes(10);
                     HttpContext.Current.Response.Cookies.Add(mycookie);
+
                     Response.Write("<script>alert('Đăng kí thành công')</script>");
                     System.Threading.Thread.Sleep(2000);
                 }

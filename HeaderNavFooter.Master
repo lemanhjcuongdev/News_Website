@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5f9729c3be.js" crossorigin="anonymous"></script>
+    <%--<script src="https://kit.fontawesome.com/5f9729c3be.js" crossorigin="anonymous"></script>--%>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css" />
+
 </head>
 <body>
             <header id="header">
@@ -39,14 +41,14 @@
                             <p>Thể thao</p>
                         </a>
                     </li>
-                    <li>
+                    <%--<li>
                         <form action="trangchu.aspx" method="post" id="form1" runat="server">
                             <input name="inputSearch" type="text" placeholder="Tìm kiếm" required="required" />
                             <button type="submit" title="Tìm kiếm">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
-                    </li>
+                    </li>--%>
                     <li>
                         <a class="link personal" href="login_register.aspx" title="Đăng nhập">
                             <i class="fa-solid fa-user"></i>
@@ -96,15 +98,18 @@
                     <li>
                         <a href="#header" title="Quay về đầu trang">Quay về đầu trang</a>
                     </li>
+<%--                    <input type="color" id="background_change" />--%>
                 </ul>
             </footer>
-    <script>
+    <script type="text/javascript">
         const publishBtn = document.querySelector(".publish");
         const logoutBtn = document.querySelector(".logout");
         const personalBtn = document.querySelector(".link.personal");
+        //const bg_change = document.querySelector("#background_change");
+        //const body = document.querySelector("body");
 
 /*        console.log(document.cookie.slice(11,16));*/
-        if (document.cookie.slice(11, 16) == "admin") {
+        if (document.cookie.slice(11, 16) != "") {
             publishBtn.classList.add("active");
             logoutBtn.classList.add("active");
             personalBtn.classList.remove("active");
@@ -113,6 +118,9 @@
             logoutBtn.classList.remove("active");
             personalBtn.classList.add("active");
         }
+        //bg_change.addEventListener("change", () => {
+        //    body.style.backgroundColor = bg_change.value;
+        //})
     </script>
     </body>
 </html>

@@ -22,6 +22,7 @@ namespace BTL_News_Website
                     //Response.Write(dsBao[i].Id);
                     if (dsBao[i].Id == int.Parse(ID))
                     {
+                        Page.Title = dsBao[i].Title;
                         //Response.Write(dsBao[i].Id);
                         sHTML += "<div class='head'>" +
                         "<p>" + dsBao[i].Category + "</p>" + "<h1>" + dsBao[i].Title + "</h1>" +

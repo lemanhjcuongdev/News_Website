@@ -48,6 +48,17 @@ namespace BTL_News_Website
                 }
                 Session["renderNewsList"] = sHTML;
             }
+            //int userCount = (int)Application["session_counter"];
+            //if (Request.Cookies.Count > 1)
+            //{
+            //    if (Request.Cookies["userCookie"].Value != null)
+            //    {
+            //        userCount++;
+            //        Application["session_counter"] = userCount;
+
+            //    }
+            //}
+            //Response.Write(Application["session_counter"]);
         }
     }
 }
