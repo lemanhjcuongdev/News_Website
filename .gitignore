@@ -12,6 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+fontawesome-free-6.1.1-web/*
 
 # Mono auto generated files
 mono_crash.*
